@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
+import React,{useState} from 'react';
+import {Container} from 'react-bootstrap';
+import RealTime from './components/Realtime';
+import Background from './components/Background';
+import Weather from './components/Weather';
+import {MyContext} from './api/MyContext';
 import './App.css';
 
+
 function App() {
+  const [store, setStore] = useState({backgroundKeyword: ''});
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MyContext.Provider value={{store, setStore}}>
+      <Container fluid>
+        <Weather />
+        <RealTime />
+        <Background />
+      </Container>
+    </MyContext.Provider>
   );
+  
 }
 
 export default App;
