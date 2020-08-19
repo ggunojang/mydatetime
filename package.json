@@ -6,10 +6,12 @@
     "dependencies": {
         "axios": "^0.19.2",
         "bootstrap": "^4.5.0",
+        "gsap": "^3.5.0",
         "moment": "^2.24.0",
         "react": "^16.8.6",
         "react-bootstrap": "1.0.1",
         "react-dom": "^16.8.6",
+        "react-gsap": "^2.2.1",
         "react-moment": "^0.9.2",
         "react-scripts": "3.0.1",
         "styled-components": "^4.2.1"
