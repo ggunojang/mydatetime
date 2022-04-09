@@ -7,7 +7,7 @@
         "axios": "^0.19.2",
         "bootstrap": "^4.5.0",
         "gsap": "^3.5.0",
-        "moment": "^2.24.0",
+        "moment": "^2.29.2",
         "react": "^16.8.6",
         "react-bootstrap": "1.0.1",
         "react-dom": "^16.8.6",
