@@ -1,20 +1,19 @@
-import { useState } from 'react';
+import { useState, useEffect } from "react";
 
-export  const Geolocate = () => {
-  // 새로운 state 변수를 선언하고, count라 부르겠습니다.
-  const [region, setRegion] = useState();
+export const Geolocate = () => {
+    const [region, setRegion] = useState(null);
 
-  if(navigator.geolocation){
-    navigator.geolocation.getCurrentPosition(
-      (position) => {
-        const data = {
-          latitude: position.coords.latitude,
-          longitude: position.coords.longitude,
-        };
-        setRegion(data);
-      }
-    );
-  }
-  return region;
+    useEffect(() => {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition((position) => {
+                const data = {
+                    latitude: position.coords.latitude,
+                    longitude: position.coords.longitude,
+                };
+                setRegion(data);
+            });
+        }
+    }, []);
 
-}
+    return region;
+};
