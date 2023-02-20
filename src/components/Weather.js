@@ -44,12 +44,12 @@ const Weather = () => {
         [wdata]
     );
     return isLoad ? (
-        <Col className="weather col-10">
+        <Col className="weather col-12">
             {cityname} / <img src={weatherIcon} alt="" /> / {celsius} ℃
         </Col>
     ) : (
         <Row>
-            <Col className="weather">Loading</Col>
+            <Col className="col-12 text-center">Loading</Col>
         </Row>
     );
 };

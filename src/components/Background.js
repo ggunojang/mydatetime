@@ -54,7 +54,9 @@ const Background = () => {
         backgroundAttachment: `fixed`,
         backgroundPosition: `center center`,
         backgroundSize: `cover`,
-        transitionDelay: `0.6s`,
+        animation: `fadeIn 0.5s ease-in-out`,
+        animationDelay: `0.5s`, // delay 추가
+        transitionDelay: `0.5s`,
         transition: `0.5s`,
         transitionTimingFunction: `ease-in-out`,
     };

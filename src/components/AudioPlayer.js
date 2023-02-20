@@ -90,7 +90,7 @@ function AudioPlayer() {
     }, [handlePlay]);
 
     return (
-        <Col className="col-2 audio cp">
+        <Col className="col-2 audio cp fixed-top float-left text-right">
             <audio
                 ref={audioRef}
                 src="http://174.36.206.197:8000/stream"
