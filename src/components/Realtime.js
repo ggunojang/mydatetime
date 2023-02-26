@@ -13,6 +13,7 @@ const TIME = styled(Col)`
     color: #fff;
     z-index: 3;
     transition: 0.5s;
+    opacity: 0.8;
 `;
 
 function RealTime() {
